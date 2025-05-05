@@ -933,7 +933,6 @@ h1 {
         display: none; /* Hide arrows on mobile */
     }
 }
-}
 
 @media (min-width: 769px) and (max-width: 1024px) {
     h1 {
@@ -1196,5 +1195,4 @@ h1 {
     .arrow {
         display: none; /* Hide arrows on mobile */
     }
-}
 }
