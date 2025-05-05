@@ -448,8 +448,14 @@ h1 {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
     .nav-container {
         display: none;
+        max-width: max-content;
     }
 
     .mobile-menu-btn {
@@ -463,6 +469,7 @@ h1 {
     .services-container {
         flex-direction: column;
         align-items: center;
+        min-width: 100%;
     }
     
     .book-now-container {
@@ -478,6 +485,7 @@ h1 {
         flex-direction: column; /* Stack content vertically */
         padding: 20px;
         text-align: center;
+        max-width: fit-content;
     }
 
     .footer-content {
@@ -511,6 +519,81 @@ h1 {
     .book-now-btn {
         display: hidden;
     }
+
+    /* Container adjustments */
+    .services-page {
+        padding: 4rem 15px;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Adjust service items */
+    .service-item {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 15px;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    /* Logo adjustments */
+    .logo-text {
+        font-size: 0.75rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        margin: 0;
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    .footer-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Service images */
+    .circle-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Book now button */
+    .book-now-button {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    /* Add this to prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .services-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .service-category {
+        padding: 0 15px;
+        margin-bottom: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -520,6 +603,7 @@ h1 {
     
     .services-container {
         padding: 0 2rem;
+
     }
 }
 
