@@ -1,0 +1,715 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    color: #b45309; /* amber-700 */
+    margin-right: 8px; /* Adjust spacing between the logo icon and text */
+}
+
+.logo-text {
+    color: #b08d57;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between the logo and Log In button */
+    margin-right: 50px;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin-right: 1rem;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    color: #b08d57;
+}
+
+.user-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #b45309; /* amber-700 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 5px; /* Adjust spacing between the user icon and text */
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.desktop-nav a {
+    color: #4b5563; /* gray-600 */
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+    color: #b45309; /* amber-700 */
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563; /* gray-600 */
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.close-menu-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563; /* gray-600 */
+    padding: 1rem;
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.mobile-menu-content .login-btn {
+    margin-right: 0;
+    margin-bottom: 2rem;
+}
+
+.mobile-menu-content nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-menu-content nav a {
+    color: #4b5563; /* gray-600 */
+    font-size: 1.125rem;
+    transition: color 0.2s;
+}
+
+.mobile-menu-content nav a:hover {
+    color: #b45309; /* amber-700 */
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    margin-top: 160px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px; /* Reduced gap between the image and the right content */
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%; /* Reduced the width of the image section */
+    position: relative;
+    top: 30px;
+    left: -15px;
+}
+
+.about-image img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Right Text Section */
+.about-text {
+    flex: 1.5; /* Increased the width of the right content */
+    max-width: 55%; /* Adjusted to take more space */
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #f9f9f9; /* Add your desired background color */
+    padding: 120px; /* Add padding for spacing inside the background */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.about-title {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    margin-top: -170px;
+    position: relative;
+    right: 120px; /* Shifted the "ABOUT US" text slightly to the left */
+    color: #b08d57; /* Gold-like color */
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.about-quote {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.about-quote-span {
+    position: relative;
+    left: 20px;
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-author {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b08d57; /* Gold-like color */
+    margin-bottom: 5px;
+}
+
+.about-role {
+    font-size: 16px;
+    color: #b08d57; /* Gold-like color */
+    font-style: italic;
+}
+
+.quote-mark {
+    font-size: 100px;
+    color: #ccac66; /* Gold color */
+    line-height: 0.2;
+    position: relative;
+    right: -35px;
+}
+
+/* Alternate About Section */
+.about-section-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.about-container-alt {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px; /* Adjusted gap for better spacing */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+/* Left Text Section */
+.about-text-alt {
+    flex: 1.5; /* Increased width for the text section */
+    max-width: 55%; /* Adjusted to take more space */
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px; /* Adjusted padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.quote-mark-alt {
+    font-size: 100px;
+    color: #ccac66; /* Gold color */
+    line-height: 0.8;
+    margin-bottom: 10px;
+}
+
+.about-quote-alt {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.about-quote-span-alt {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-description-alt {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-author-alt {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b08d57; /* Gold-like color */
+    margin-bottom: 5px;
+}
+
+.about-role-alt {
+    font-size: 16px;
+    color: #b08d57; /* Gold-like color */
+    font-style: italic;
+}
+
+/* Right Image Section */
+.about-image-alt {
+    flex: 1;
+}
+
+.about-image-alt img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Third About Section */
+.about-section-third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.about-container-third {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px; /* Adjusted gap for better spacing */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+/* Left Image Section */
+.about-image-third {
+    flex: 1;
+}
+
+.about-image-third img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Right Text Section */
+.about-text-third {
+    flex: 1.5; /* Increased width for the text section */
+    max-width: 55%; /* Adjusted to take more space */
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px; /* Adjusted padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.quote-mark-third {
+    font-size: 100px;
+    color: #ccac66; /* Gold color */
+    line-height: 0.8;
+    margin-bottom: 10px;
+}
+
+.about-quote-third {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.about-quote-span-third {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-description-third {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-author-third {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b08d57; /* Gold-like color */
+    margin-bottom: 5px;
+}
+
+.about-role-third {
+    font-size: 16px;
+    color: #b08d57; /* Gold-like color */
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack text and image vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .about-text {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-image {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .quote-mark {
+        font-size: 80px; /* Reduce size for smaller screens */
+    }
+
+    .about-quote {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .about-container-alt {
+        flex-direction: column; /* Stack text and image vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .about-text-alt {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-image-alt {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .quote-mark-alt {
+        font-size: 80px; /* Reduce size for smaller screens */
+    }
+
+    .about-quote-alt {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .about-container-third {
+        flex-direction: column; /* Stack text and image vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .about-text-third {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-image-third {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .quote-mark-third {
+        font-size: 80px; /* Reduce size for smaller screens */
+    }
+
+    .about-quote-third {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: #b08d57; /* Footer background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    position: relative;
+}
+
+.footer-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%; 
+    background-color: #965646;
+    transform: rotate(0deg); 
+}
+
+
+
+.footer-section a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 3rem;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e4d9bc; /* Light hover color */
+}
+
+.footer-book-now {
+    margin-top: 20px;
+}
+
+.book-now-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    margin-right: 53px;
+    margin-top: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #b45309; /* amber-700 */
+    color: #b45309; /* amber-700 */
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #b08d57; 
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.book-now-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust height to match the image */
+    width: 200px; /* Adjust width to match the image */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #b08d57; /* Gold-like background color */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid #fff; /* White border */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    left: 860px;
+}
+
+.book-now-button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #b08d57; /* Gold-like text color on hover */
+    border: 1px solid #b08d57; /* Gold-like border on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .book-now-container {
+        position: relative;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Footer Styles */
+    .footer {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 20px; /* Add spacing between sections */
+    }
+
+    .footer-section {
+        position: static; /* Remove relative positioning */
+    }
+
+    .footer-section:not(:last-child)::after {
+        content: none; /* Remove the line between sections */
+    }
+
+    .footer-social-icons {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .book-now-button {
+        display: block;
+        position: relative;
+        left: 0;
+        text-align: center;
+        justify-content: center;
+        right: 0;
+        width: 150px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .services-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 3rem;
+    }
+}

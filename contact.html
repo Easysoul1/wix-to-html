@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="logo">
+            <a href="/">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="logo-text">TWILIGHT EVENTS</span>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-left">
+            <div class="shell-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Add your shell icon SVG path here -->
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="currentColor" fill="white"/>
+                </svg>
+            </div>
+            <p class="contact-message">
+                Contact us to<br>
+                turn your dream<br>
+                into a reality.
+            </p>
+        </div>
+        <div class="contact-right">
+            <p class="form-header">
+                Please fill out this form and we will<br>
+                get back to you shortly
+            </p>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Enter Your First Name *</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Enter Your Last Name *</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label>Enter Your Email *</label>
+                    </div>
+                    <div class="input-group phone-group">
+                        <div class="country-code">
+                            <select id="countryCode" name="countryCode">
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                                <option value="+33">+33</option>
+                                <option value="+49">+49</option>
+                                <option value="+81">+81</option>
+                                <option value="+86">+86</option>
+                                <option value="+91">+91</option>
+                                <option value="+234">+234</option>
+                                <option value="+27">+27</option>
+                                <option value="+61">+61</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <input type="tel" id="phone">
+                        <label>Enter Your Phone</label>
+                    </div>
+                </div>
+                <div class="form-row full-width">
+                    <div class="input-group">
+                        <textarea rows="4"></textarea>
+                        <label>Type Your Message Here</label>
+                    </div>
+                </div>
+                <div class="form-row full-width">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="twilight-info">
+        <div class="info-left">
+            <h2 class="info-title">TWILIGHT EVENTS</h2>
+            <div class="info-details">
+                <p class="address">500 Terry Francine Street,<br>SF, CA 94158</p>
+                <p class="contact">Tel: 123-456-7890, &nbsp; Fax: 123-456-7890</p>
+                <p class="email"><a href="mailto:info@mysite.com">info@mysite.com</a></p>
+            </div>
+        </div>
+        <div class="info-right">
+            <img src="https://static.wixstatic.com/media/c19c76_5134149a64f04927a9597998ef802ceb~mv2_d_5661_3774_s_4_2.jpg/v1/fill/w_394,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c19c76_5134149a64f04927a9597998ef802ceb~mv2_d_5661_3774_s_4_2.jpg" alt="Twilight Events Outdoor Dining">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>500 Terry Francine Street<br>San Francisco, <br> CA 94158</p>
+            </div>
+            <div class="footer-section">
+                <p>Tel: 123-456-7890<br>Fax: 123-456-7890<br>info@mysite.com</p>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2035 by Twilight Events.<br>Powered and secured by <a href="#">Wix</a>.</p>
+            </div>
+            <div class="footer-social-icons">
+                <!-- Replace these placeholders with actual icons -->
+                <a href="#" class="social-icon"><img src="https://static.wixstatic.com/media/01ab6619093f45388d66736ec22e5885.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01ab6619093f45388d66736ec22e5885.png" alt="twitter icon"></a>
+                <a href="#" class="social-icon"><img src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/23fd2a2be53141ed810f4d3dcdcd01fa.png" alt="facebook icon"></a>
+                <a href="#" class="social-icon"><img src="https://static.wixstatic.com/media/9c486556465843c5850fabfd68dfae49.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c486556465843c5850fabfd68dfae49.png" alt="pintrest icon"></a>
+                <a href="#" class="social-icon"><img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/81af6121f84c41a5b4391d7d37fce12a.png" alt="instagram icon"></a>
+            </div>
+            <div class="book-now-button">
+                <a href="contact.html" class="book-now-button-class">Book Now</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
