@@ -165,7 +165,8 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    color: #4b5563; /* gray-600 */
+    padding: 10px;
+    color: #333;
 }
 
 @media (max-width: 768px) {
@@ -834,5 +835,36 @@ button:hover {
         position: absolute;
         top: 20px;
         right: 20px;
+    }
+}
+
+/* Mobile menu button styles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+/* Update your media query */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
     }
 }
