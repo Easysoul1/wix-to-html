@@ -604,3 +604,79 @@ h1 {
         padding: 0;
     }
 }
+
+/* Add a new media query for medium-sized devices */
+@media (min-width: 769px) and (max-width: 1279px) {
+    /* Prevent overflow */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Services page layout */
+    .services-page {
+        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* Container adjustments */
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Service items */
+    .service-item {
+        flex: 0 1 calc(33.333% - 20px);
+        min-width: 200px;
+        max-width: none;
+        margin: 0;
+    }
+
+    /* Book now button adjustments */
+    .book-now-button {
+        position: static;
+        margin: 20px auto;
+        left: auto;
+        right: auto;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        width: calc(100% - 40px);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Service category adjustments */
+    .service-category {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 0 1rem;
+    }
+
+    .category-title {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
