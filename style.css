@@ -1120,3 +1120,25 @@ h1 {
     color: #b08d57; /* Gold-like text color on hover */
     border: 1px solid #b08d57; /* Gold-like border on hover */
 }
+
+.hero-text {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
