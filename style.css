@@ -36,6 +36,9 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: 20px;
 }
 
 .logo a {
@@ -43,9 +46,28 @@ header {
     align-items: center;
 }
 
+.logo a:first-child {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-icon {
-    color: #b45309; /* amber-700 */
-    margin-right: 8px; /* Adjust spacing between the logo icon and text */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.logo-icon img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-icon img {
+    filter: brightness(0.8); /* Darkens the image slightly on hover */
 }
 
 .logo-text {
@@ -59,17 +81,18 @@ header {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adjust spacing between the logo and Log In button */
+    gap: 50px; /* Adjust spacing between the logo and Log In button */
     margin-right: 50px;
 }
 
 .login-btn {
+    margin-left: auto; /* Pushes login button to the right */
     display: flex;
     align-items: center;
+    gap: 8px;
     text-decoration: none;
-    color: #000;
-    margin-right: 1rem;
-    font-size: 16px;
+    color: black;
+    transition: color 0.3s ease;
 }
 
 .login-btn:hover {
@@ -669,6 +692,33 @@ h1 {
     .arrow {
         display: none; /* Hide arrows on mobile */
     }
+
+    .logo {
+        gap: 20px; /* Reduce gap on mobile */
+    }
+
+    /* Hide login button in header on mobile */
+    .logo .login-btn {
+        display: none;
+    }
+
+    /* Style login button in mobile menu */
+    .mobile-menu-content .login-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #4b5563;
+        margin: 20px 0;
+    }
+
+    .mobile-menu-content .login-btn:hover {
+        color: #b08d57;
+    }
+
+    .mobile-menu-content .user-icon {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1069,130 +1119,4 @@ h1 {
     background-color: #fff; /* White background on hover */
     color: #b08d57; /* Gold-like text color on hover */
     border: 1px solid #b08d57; /* Gold-like border on hover */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-container {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    h1 {
-        font-size: 2.25rem;
-    }
-    
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .book-now-container {
-        position: relative;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Footer Styles */
-    .footer {
-        flex-direction: column; /* Stack content vertically */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 20px; /* Add spacing between sections */
-    }
-
-    .footer-section {
-        position: static; /* Remove relative positioning */
-    }
-
-    .footer-section:not(:last-child)::after {
-        content: none; /* Remove the line between sections */
-    }
-
-    .footer-social-icons {
-        margin-top: 20px;
-        justify-content: center;
-    }
-
-    .book-now-button {
-        display: block;
-        position: relative;
-        left: 0;
-        text-align: center;
-        justify-content: center;
-        right: 0;
-        width: 150px;
-    }
-
-    .book-now-btn {
-        display: hidden;
-    }
-
-    /* Prevent horizontal scroll */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
-
-    /* Hero section adjustments */
-    .hero-section {
-        margin-top: 0;
-        width: 100%;
-        height: 100vh;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 20px;
-        top: 0;
-    }
-
-    /* Services section adjustments */
-    .services-section {
-        padding: 40px 0;
-        width: 100%;
-    }
-
-    .services-container {
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 20px;
-    }
-
-    .services-text {
-        max-width: 100%;
-        width: 100%;
-        padding: 30px 20px;
-    }
-
-    .services-image {
-        width: 100%;
-    }
-
-    /* Testimonial section adjustments */
-    .testimonial-section {
-        padding: 40px 0;
-        width: 100%;
-    }
-
-    .testimonial-container {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .arrow {
-        display: none; /* Hide arrows on mobile */
-    }
 }
