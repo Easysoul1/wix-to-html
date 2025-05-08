@@ -220,7 +220,7 @@ header {
 
 /* Left Side */
 .contact-left {
-    background-color: #4a4a4a;
+    background-color: #575555;
     color: white;
     width: 20%;
     position: relative;
@@ -235,7 +235,20 @@ header {
 }
 
 .shell-icon {
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.shell-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.shell-icon img:hover {
+    transform: scale(1.1);
 }
 
 .contact-message {
@@ -248,7 +261,7 @@ header {
 /* Right Side */
 .contact-right {
     width: 60%;
-    background-color: rgb(228,217,188);
+    background-color: #fbfbfb;
     position: relative;
     left: 150px;
     padding: 80px 60px;
@@ -438,7 +451,7 @@ button:hover {
     align-items: center;
     text-align: center;
     padding: 60px 40px;
-    background-color: rgb(228,217,188);
+    background-color: #fbfbfb;
 }
 
 .info-title {
