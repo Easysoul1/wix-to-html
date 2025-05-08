@@ -35,19 +35,37 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Styles */
 .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: 20px;
 }
 
 .logo a {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-icon {
-    color: #b45309; /* amber-700 */
-    margin-right: 8px; /* Adjust spacing between the logo icon and text */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.logo-icon img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-icon img {
+    filter: brightness(0.8);
 }
 
 .logo-text {
@@ -58,36 +76,12 @@ header {
     text-transform: uppercase;
 }
 
+/* Navigation Styles */
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adjust spacing between the logo and Log In button */
+    gap: 50px;
     margin-right: 50px;
-}
-
-.login-btn {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    margin-right: 1rem;
-    font-size: 16px;
-}
-
-.login-btn:hover {
-    color: #b08d57;
-}
-
-.user-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #b45309; /* amber-700 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin-right: 5px; /* Adjust spacing between the user icon and text */
 }
 
 .desktop-nav {
@@ -96,24 +90,56 @@ header {
 }
 
 .desktop-nav a {
-    color: #4b5563; /* gray-600 */
+    text-decoration: none;
+    color: #4b5563;
     font-size: 0.875rem;
     transition: color 0.2s;
 }
 
 .desktop-nav a:hover {
-    color: #b45309; /* amber-700 */
+    color: #b45309;
 }
 
+/* Login Button Styles */
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #b08d57;
+}
+
+.login-btn span {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.user-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #b45309;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 5px;
+}
+
+/* Mobile Menu Styles */
 .mobile-menu-btn {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    color: #4b5563; /* gray-600 */
+    color: #4b5563;
 }
 
-/* Mobile menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -135,7 +161,7 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    color: #4b5563; /* gray-600 */
+    color: #4b5563;
     padding: 1rem;
 }
 
@@ -147,26 +173,33 @@ header {
     flex: 1;
 }
 
-.mobile-menu-content .login-btn {
-    margin-right: 0;
-    margin-bottom: 2rem;
-}
-
 .mobile-menu-content nav {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-content a:hover {
+    color: #b08d57;
+}
+
+.mobile-menu-content .login-btn {
+    display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 8px;
+    color: #4b5563;
+    margin: 20px 0;
 }
 
-.mobile-menu-content nav a {
-    color: #4b5563; /* gray-600 */
-    font-size: 1.125rem;
-    transition: color 0.2s;
-}
-
-.mobile-menu-content nav a:hover {
-    color: #b45309; /* amber-700 */
+.mobile-menu-content .login-btn:hover {
+    color: #b08d57;
 }
 
 /* About Section */
@@ -509,6 +542,14 @@ header {
         display: block;
     }
 
+    .logo {
+        gap: 20px;
+    }
+
+    .logo .login-btn {
+        display: none;
+    }
+
     h1 {
         font-size: 2.25rem;
     }
@@ -698,6 +739,19 @@ header {
     
     .services-container {
         padding: 0 2rem;
+    }
+
+    .nav-container {
+        gap: 30px;
+        margin-right: 30px;
+    }
+
+    .desktop-nav {
+        gap: 20px;
+    }
+
+    .logo {
+        gap: 30px;
     }
 }
 

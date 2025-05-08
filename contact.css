@@ -36,6 +36,9 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: 20px;
 }
 
 .logo a {
@@ -46,6 +49,16 @@ header {
 .logo-icon {
     color: #b45309; /* amber-700 */
     margin-right: 8px; /* Adjust spacing between the logo icon and text */
+}
+
+.logo-icon img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-icon img {
+    filter: brightness(0.8);
 }
 
 .logo-text {
@@ -66,8 +79,10 @@ header {
 .login-btn {
     display: flex;
     align-items: center;
+    gap: 8px;
     text-decoration: none;
-    color: #000;
+    color: black;
+    transition: color 0.3s ease;
     margin-right: 1rem;
     font-size: 16px;
 }
@@ -138,8 +153,15 @@ header {
 }
 
 .mobile-menu-content .login-btn {
-    margin-right: 0;
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    margin: 20px 0;
+}
+
+.mobile-menu-content .login-btn:hover {
+    color: #b08d57;
 }
 
 .mobile-menu-content nav {
@@ -166,7 +188,7 @@ header {
     border: none;
     cursor: pointer;
     padding: 10px;
-    color: #333;
+    color: #4b5563;
 }
 
 @media (max-width: 768px) {
@@ -176,6 +198,14 @@ header {
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    .logo {
+        gap: 20px;
+    }
+
+    .logo .login-btn {
+        display: none;
     }
 }
 
