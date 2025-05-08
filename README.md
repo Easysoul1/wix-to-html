@@ -83,7 +83,7 @@ The project uses separate CSS files for different sections:
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone [https://github.com/Easysoul1/wix-to-html.git]
 ```
 
 2. Open the project in your preferred code editor
@@ -117,7 +117,7 @@ wix-to-html/
 │   ├── services.css
 │   └── contact.css
 │
-└── images/
+└── assets/
     └── [image files]
 ```
 
