@@ -669,6 +669,7 @@ h1 {
         right: 15px;
         width: 150px; /* Slightly smaller on medium screens */
         height: 150px;
+        display: none;
     }
 }
 
@@ -713,6 +714,7 @@ h1 {
     /* Book now button adjustments */
     .book-now-button {
         position: static;
+        display: none;
         margin: 20px auto;
         left: auto;
         right: auto;
@@ -799,7 +801,7 @@ h1 {
 }
 
 /* For small screens (mobile) - single column */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (max-width: 1024px) {
     .services-container {
         display: flex;
         flex-direction: column;
@@ -819,6 +821,18 @@ h1 {
             display: none;
         }
         padding: 0 15px;
+    }
+
+    .book-now-container {
+        display: none;
+    }
+
+    /* Also hide the footer version if it exists */
+    .footer-book-now {
+        display: none;
+    }
+    .footer-book-now {
+        display: none;
     }
 }
 
