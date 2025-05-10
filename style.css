@@ -29,8 +29,6 @@ header {
     align-items: center;
     padding: 10px 20px;
     z-index: 100;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -148,13 +146,11 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 200px;
+    max-width: fit-content;
     background-color: white;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 10;
 }
@@ -174,7 +170,7 @@ header {
 }
 
 .dropdown-link:hover {
-    background-color: #f0f0f0;
+    background-color: #fff;
     color: #b45309;
 }
 
