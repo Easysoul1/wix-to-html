@@ -386,22 +386,65 @@ h1 {
     }
 }
 
+/* Service container base styles */
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Service item base styles */
 .service-item {
+    flex: 1 1 100%; /* Full width by default (mobile) */
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(255, 253, 247, 0.5);
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 768px) {
+    .service-item {
+        flex: 0 1 calc(50% - 1rem); /* Two columns */
+    }
+}
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1024px) {
+    .service-item {
+        flex: 0 1 calc(33.333% - 1.333rem); /* Three columns */
+    }
+}
+
+/* Handle desktop site on mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .services-container {
+        padding: 1rem 2rem;
+    }
+    
+    .service-item {
+        flex: 1 1 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Ensure images are responsive */
+.service-image img.circle-image {
     width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .service-item {
