@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
     <title>Contact Us</title>
 </head>
 <body>
@@ -12,7 +15,7 @@
         <div class="logo">
             <a href="/">
                 <span class="logo-icon">
-                    <img src="assets/image.svg" alt="Twilight Events Logo">
+                    <img src="assets/icon.jpg" alt="Twilight Events Logo">
                 </span>
                 <span class="logo-text">TWILIGHT EVENTS</span>
             </a>
@@ -109,25 +112,7 @@
                         <label>Enter Your Email *</label>
                     </div>
                     <div class="input-group phone-group">
-                        <div class="country-code">
-                            <select id="countryCode" name="countryCode">
-                                <option value="+1">+1</option>
-                                <option value="+44">+44</option>
-                                <option value="+33">+33</option>
-                                <option value="+49">+49</option>
-                                <option value="+81">+81</option>
-                                <option value="+86">+86</option>
-                                <option value="+91">+91</option>
-                                <option value="+234">+234</option>
-                                <option value="+27">+27</option>
-                                <option value="+61">+61</option>
-                                <!-- Add more country codes as needed -->
-                            </select>
-                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <input type="tel" id="phone">
+                        <input id="phone" type="tel" name="phone" placeholder=" " required>
                         <label>Enter Your Phone</label>
                     </div>
                 </div>

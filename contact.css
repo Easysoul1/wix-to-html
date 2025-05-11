@@ -50,15 +50,11 @@ header {
 }
 
 .logo-icon img {
-    width: 40px;
-    height: 40px;
-    font-size: 10px;
+    width: 65px;
+    height: 65px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     transition: filter 0.3s ease;
-}
-
-.logo:hover .logo-icon img {
-    filter: brightness(0.8);
 }
 
 .logo-text {
@@ -321,7 +317,8 @@ header {
 }
 
 .contact-message {
-    font-size: 1.25rem;
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
     line-height: 2;
     letter-spacing: 1px;
     font-weight: 300;
@@ -342,9 +339,10 @@ header {
 
 .form-header {
     text-align: center;
-    font-size: 1rem;
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
     letter-spacing: 1px;
-    color: #333;
+    color: #333333;
     margin-bottom: 3rem;
     line-height: 1.6;
 }
@@ -352,6 +350,8 @@ header {
 .contact-form {
     width: 100%;
     max-width: 800px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
 }
 
 .form-row {
@@ -431,6 +431,7 @@ button:hover {
 .phone-group {
     display: flex;
     gap: 10px;
+    position: relative;
 }
 
 .country-code {
@@ -464,10 +465,12 @@ button:hover {
 
 .phone-group input[type="tel"] {
     flex: 1;
+    padding-left: 90px !important;
 }
 
 .phone-group label {
     left: 90px; /* Adjust based on country code width */
+    z-index: 1;
 }
 
 /* Style for focus state */
@@ -479,6 +482,49 @@ button:hover {
 /* Hover state */
 .country-code select:hover {
     border-bottom-color: #333;
+}
+
+.iti {
+    width: 100%;
+}
+
+/* Phone input specific styles */
+.phone-group {
+    position: relative;
+    margin-top: 20px; /* Add space for the floating label */
+}
+
+.phone-group .iti {
+    width: 100%;
+}
+
+.phone-group input {
+    padding-left: 90px !important;
+    padding-top: 10px;
+}
+
+.phone-group label {
+    position: absolute;
+    left: 90px;
+    top: -20px; /* Position label above the input by default */
+    font-size: 0.8rem;
+    color: #333;
+    background-color: #fbfbfb;
+    padding: 0 5px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Remove transform since label is already positioned above */
+.phone-group input:focus ~ label,
+.phone-group input:not(:placeholder-shown) ~ label {
+    color: #333;
+    font-size: 0.8rem;
+}
+
+/* Ensure placeholder is hidden */
+.phone-group input::placeholder {
+    color: transparent;
 }
 
 /* Responsive Design */
@@ -524,7 +570,8 @@ button:hover {
 }
 
 .info-title {
-    font-size: 20px;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
     font-weight: normal;
     letter-spacing: 8px;
     margin-bottom: 40px;
@@ -535,7 +582,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
     letter-spacing: 1px;
     line-height: 1.6;
     color: #333;
@@ -774,6 +822,10 @@ button:hover {
         justify-content: center;
         right: 0;
         width: 150px;
+    }
+
+    .vertical-line{
+        display: none;
     }
 }
 

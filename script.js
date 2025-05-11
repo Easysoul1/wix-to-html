@@ -52,3 +52,21 @@ rightArrow.addEventListener('click', () => {
 // Initialize the first testimonial
 showTestimonial(currentIndex);
 });
+
+// Phone input initialization
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.querySelector("#phone");
+    if (phoneInput) {
+        window.intlTelInput(phoneInput, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch("https://ipapi.co/json")
+                    .then(function(res) { return res.json(); })
+                    .then(function(data) { callback(data.country_code); })
+                    .catch(function() { callback("us"); });
+            },
+        });
+    }
+});
