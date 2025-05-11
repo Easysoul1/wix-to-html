@@ -388,18 +388,15 @@ h1 {
 
 /* Service container base styles */
 .services-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Service item base styles */
 .service-item {
-    flex: 1 1 100%; /* Full width by default (mobile) */
-    min-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,33 +405,33 @@ h1 {
     background-color: #fbfbfb;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(255, 253, 247, 0.5);
+    width: 100%;
 }
 
-/* Medium screens (tablets) */
-@media screen and (min-width: 768px) {
-    .service-item {
-        flex: 0 1 calc(50% - 1rem); /* Two columns */
-    }
-}
-
-/* Large screens (desktops) */
-@media screen and (min-width: 1024px) {
-    .service-item {
-        flex: 0 1 calc(33.333% - 1.333rem); /* Three columns */
-    }
-}
-
-/* Handle desktop site on mobile */
-@media (max-width: 767px) and (orientation: landscape) {
+/* Mobile first approach */
+@media screen and (max-width: 767px) {
     .services-container {
-        padding: 1rem 2rem;
+        grid-template-columns: 1fr;
     }
-    
+
     .service-item {
-        flex: 1 1 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        min-width: 280px;
     }
+}
+
+/* Desktop and larger screens */
+@media screen and (min-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Keep images consistent across all screen sizes */
+.service-image img.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Ensure images are responsive */
@@ -459,7 +456,6 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(255, 253, 247, 0.5);
 }
-
 
 .service-image {
     margin-bottom: 1.5rem;
@@ -518,8 +514,6 @@ h1 {
     background-color: #AF9453; /* Slightly darker amber */
     color: white;
 }
-
-
 
 /* Footer styles */
 .footer {
@@ -600,8 +594,6 @@ h1 {
     margin-top: 20px;
 }
 
-
-
 .book-now-btn:hover {
     background-color: #AF9453; 
     color: #fff;
@@ -646,11 +638,6 @@ h1 {
 
     h1 {
         font-size: 2.25rem;
-    }
-    
-    .services-container {
-        flex-direction: column;
-        align-items: center;
     }
     
     .book-now-container {
@@ -797,10 +784,6 @@ h1 {
     h1 {
         font-size: 2.5rem;
     }
-    
-    .services-container {
-        padding: 0 2rem;
-    }
 
     .book-now-btn {
         margin-top: 150px; /* Additional spacing on medium screens */
@@ -846,78 +829,41 @@ h1 {
 }
 
 /* Add a new media query for medium-sized devices */
-@media (min-width: 769px) and (max-width: 1279px) {
-    /* Prevent overflow */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
 
-    /* Services page layout */
-    .services-page {
-        padding: 2rem 1rem;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
+.book-now-button {
+    position: static;
+    display: none;
+    margin: 20px auto;
+    left: auto;
+    right: auto;
+}
 
-    /* Container adjustments */
-    .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+/* Footer adjustments */
+.footer {
+    width: calc(100% - 40px);
+    margin: 20px;
+    padding: 20px;
+}
 
-    /* Service items */
-    .service-item {
-        flex: 0 1 calc(33.333% - 20px);
-        min-width: 200px;
-        max-width: none;
-        margin: 0;
-    }
+.footer-content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    /* Book now button adjustments */
-    .book-now-button {
-        position: static;
-        display: none;
-        margin: 20px auto;
-        left: auto;
-        right: auto;
-    }
+/* Service category adjustments */
+.service-category {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0 1rem;
+}
 
-    /* Footer adjustments */
-    .footer {
-        width: calc(100% - 40px);
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .footer-content {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Service category adjustments */
-    .service-category {
-        width: 100%;
-        margin: 0 0 2rem 0;
-        padding: 0 1rem;
-    }
-
-    .category-title {
-        width: 100%;
-        text-align: center;
-    }
+.category-title {
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -955,91 +901,124 @@ h1 {
     }
 }
 
-@media screen and (max-width: 829px) {
-    /* Adjust header spacing */
-    .nav-container {
-        gap: 25px; /* Reduce gap between nav items */
-        margin-right: 20px;
-    }
+/* Base service container styles */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .desktop-nav {
-        gap: 1.5rem; /* Reduce gap between nav links */
-    }
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(255, 253, 247, 0.5);
+    width: 100%;
+}
 
-    .logo {
-        gap: 25px; /* Reduce gap in logo area */
-    }
+/* Service content styles */
+.service-image {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 200px;
+}
 
-    /* Adjust login button spacing */
-    .login-btn {
-        margin-left: 15px; /* Reduce margin */
-    }
+.service-image img.circle-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-    /* Modify services layout */
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #AF9453;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+/* Mobile screens */
+@media screen and (max-width: 767px) {
     .services-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        gap: 2rem;
-        justify-items: center;
-    }
-
-    /* Make the last service item centered */
-    .service-item:last-child {
-        grid-column: 1 / -1; /* Span both columns */
-        max-width: 350px; /* Match other items width */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
     }
 
     .service-item {
-        width: 100%;
         max-width: 350px;
-        margin: 0;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .service-image {
+        max-width: 150px;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description br {
+        display: none;
     }
 }
 
-/* For medium screens (tablets) - keep 2 columns */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* Tablet screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .services-container {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        justify-items: center;
+        gap: 1.5rem;
+    }
+
+    .service-item {
+        max-width: none;
+    }
+
+    .service-image {
+        max-width: 180px;
     }
 }
 
-/* For small screens (mobile) - single column */
-@media screen and (max-width: 767px) and (max-width: 1024px) {
+/* Desktop screens */
+@media screen and (min-width: 1024px) {
     .services-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 
     .service-item {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        max-width: none;
+        transition: transform 0.3s ease;
     }
 
-    .service-description {
-        /* Remove line breaks on mobile */
-        br {
-            display: none;
-        }
-        padding: 0 15px;
-    }
-
-    .book-now-container {
-        display: none;
-    }
-
-    /* Also hide the footer version if it exists */
-    .footer-book-now {
-        display: none;
-    }
-    .footer-book-now {
-        display: none;
+    .service-item:hover {
+        transform: translateY(-5px);
     }
 }
 
+/* Large desktop screens */
+@media screen and (min-width: 1440px) {
+    .services-container {
+        gap: 3rem;
+    }
+
+    .service-image {
+        max-width: 220px;
+    }
+}
 
