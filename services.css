@@ -356,13 +356,52 @@ h1 {
     letter-spacing: 0.3em;
     color: #AF9453;
     margin-bottom: 3rem;
+    line-height: 1.4;
+}
+
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+    .category-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.25em;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+    .category-title {
+        font-size: 1.1rem;
+        letter-spacing: 0.2em;
+        padding: 0 10px;
+    }
+
+    .category-title[data-title="PRIVATE PARTIES"] {
+        content: "P R I V A T E\A P A R T I E S";
+        white-space: pre;
+    }
+
+    .category-title[data-title="CORPORATE EVENTS"] {
+        content: "C O R P O R A T E\A E V E N T S";
+        white-space: pre;
+    }
 }
 
 .services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
 }
 
 .service-item {
@@ -744,6 +783,24 @@ h1 {
     }
 }
 
+/* Service container and items base styles */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
 
 /* Add a new media query for medium-sized devices */
 @media (min-width: 769px) and (max-width: 1279px) {
@@ -817,6 +874,41 @@ h1 {
     .category-title {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        padding: 1rem;
+    }
+
+    .service-item {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .service-description {
+        /* Remove line breaks on smaller screens */
+        br {
+            display: none;
+        }
+    }
+
+    .service-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .service-item {
+        padding: 0.5rem;
     }
 }
 
