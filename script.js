@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+});
 const testimonials = document.querySelectorAll('.testimonial-content');
 const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');
@@ -51,8 +52,6 @@ rightArrow.addEventListener('click', () => {
 
 // Initialize the first testimonial
 showTestimonial(currentIndex);
-});
-
 // Phone input initialization
 document.addEventListener('DOMContentLoaded', function() {
     const phoneInput = document.querySelector("#phone");
