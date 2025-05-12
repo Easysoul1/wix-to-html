@@ -636,132 +636,6 @@ button:hover {
     }
 }
 
-/* Footer styles */
-.footer {
-    background-color: #b08d57; /* Footer background color */
-    color: #fff; /* White text color */
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-}
-
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.8;
-    position: relative;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.vertical-line {
-    display: block;
-    width: 1px;
-    height: 64px;
-    background-color: #fff; /* Or any color you want for the line */
-  }
-
-.footer-section a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footer-social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    margin-left: 3rem;
-}
-
-.social-icon {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #e4d9bc; /* Light hover color */
-}
-
-.footer-book-now {
-    margin-top: 20px;
-}
-
-.book-now-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 170px;
-    margin-right: 53px;
-    margin-top: 3.2rem;
-    border-radius: 50%;
-    border: 1px solid #AF9453; 
-    color: #AF9453; 
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-}
-
-.book-now-btn:hover {
-    background-color: #b08d57; 
-    color: #fff;
-    border: 1px solid #fff;
-}
-
-.book-now-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Adjust height to match the image */
-    width: 200px; /* Adjust width to match the image */
-    border-radius: 5px; /* Slightly rounded corners */
-    background-color: #b08d57; /* Gold-like background color */
-    color: #fff; /* White text color */
-    font-size: 16px; /* Adjust font size */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 1px solid #fff; /* White border */
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    left: 860px;
-}
-
-.book-now-button:hover {
-    background-color: #fff; /* White background on hover */
-    color: #b08d57; /* Gold-like text color on hover */
-    border: 1px solid #b08d57; /* Gold-like border on hover */
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav-container {
@@ -779,53 +653,6 @@ button:hover {
     .services-container {
         flex-direction: column;
         align-items: center;
-    }
-    
-    .book-now-container {
-        position: relative;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Footer Styles */
-    .footer {
-        flex-direction: column; /* Stack content vertically */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 20px; /* Add spacing between sections */
-    }
-
-    .footer-section {
-        position: static; /* Remove relative positioning */
-    }
-
-    .footer-section:not(:last-child)::after {
-        content: none; /* Remove the line between sections */
-    }
-
-    .footer-social-icons {
-        margin-top: 20px;
-        justify-content: center;
-    }
-
-    .book-now-button {
-        display: block;
-        position: relative;
-        left: 0;
-        text-align: center;
-        justify-content: center;
-        right: 0;
-        width: 150px;
-    }
-
-    .vertical-line{
-        display: none;
     }
 }
 
@@ -908,18 +735,6 @@ button:hover {
         position: static;
         left: 0;
         top: 0;
-    }
-
-    /* Footer adjustments */
-    .footer {
-        width: 100%;
-        margin: 0;
-        padding: 40px 20px;
-    }
-
-    .footer-content {
-        width: 100%;
-        padding: 0;
     }
 
     /* Phone input adjustments */

@@ -775,7 +775,7 @@ h1 {
         padding: 20px 0;
     }
 
-    /* Footer adjustments */
+    /* Footer adjustments
     .footer {
         padding: 30px 20px;
         margin: 0;
@@ -783,7 +783,7 @@ h1 {
 
     .footer-content {
         gap: 20px;
-    }
+    } */
 
     /* Mobile menu adjustments */
     .mobile-menu-content {
@@ -907,10 +907,10 @@ h1 {
     }
 }
 
-/* Footer styles */
-.footer {
-    background-color: #AF9453; /* Footer background color */
-    color: #fff; /* White text color */
+/*Footer styles*/
+/* .footer {
+    background-color: #AF9453;
+    color: #fff; 
     padding: 40px 20px;
     text-align: center;
     position: relative;
@@ -956,7 +956,7 @@ h1 {
     display: block;
     width: 1px;
     height: 64px;
-    background-color: #fff; /* Or any color you want for the line */
+    background-color: #fff; 
   }
 
 
@@ -981,7 +981,7 @@ h1 {
 }
 
 .social-icon:hover {
-    color: #e4d9bc; /* Light hover color */
+    color: #e4d9bc; 
 }
 
 .footer-book-now {
@@ -1013,16 +1013,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px; /* Adjust height to match the image */
-    width: 200px; /* Adjust width to match the image */
-    border-radius: 5px; /* Slightly rounded corners */
-    background-color: #AF9453; /* Gold-like background color */
-    color: #fff; /* White text color */
-    font-size: 16px; /* Adjust font size */
+    height: 50px; 
+    width: 200px; 
+    border-radius: 5px; 
+    background-color: #AF9453; 
+    color: #fff; 
+    font-size: 16px; 
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border: 1px solid #fff; /* White border */
+    border: 1px solid #fff; 
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -1030,10 +1030,10 @@ h1 {
 }
 
 .book-now-button:hover {
-    background-color: #fff; /* White background on hover */
-    color: #AF9453; /* Gold-like text color on hover */
-    border: 1px solid #AF9453; /* Gold-like border on hover */
-}
+    background-color: #fff; 
+    color: #AF9453; 
+    border: 1px solid #AF9453; 
+} */
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -1054,32 +1054,30 @@ h1 {
         align-items: center;
     }
     
-    .book-now-container {
+    /* .book-now-container {
         position: relative;
         margin-top: 2rem;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-
-    /* Footer Styles */
     .footer {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column;
         padding: 20px;
         text-align: center;
     }
 
     .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 20px; /* Add spacing between sections */
+        flex-direction: column;
+        gap: 20px; 
     }
 
     .footer-section {
-        position: static; /* Remove relative positioning */
+        position: static;
     }
 
     .footer-section:not(:last-child)::after {
-        content: none; /* Remove the line between sections */
+        content: none; 
     }
 
     .footer-social-icons {
@@ -1088,7 +1086,7 @@ h1 {
     }
 
     .vertical-line {
-        display: none; /* Hide vertical line on mobile */
+        display: none; 
     }
 
     .book-now-button {
@@ -1111,7 +1109,7 @@ h1 {
 
     .vertical-line {
         display: none;
-    }
+    } */
 
     /* Prevent horizontal scroll */
     html, body {
