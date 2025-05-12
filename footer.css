@@ -121,9 +121,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     text-decoration: none;
     position: relative;
-    left: 800px;
+    left: 700px;
     margin-top: 20px;
 }
 
