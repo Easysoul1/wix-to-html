@@ -119,7 +119,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
-    left: 860px;
+    left: 700px;
 }
 
 .social-icon {
@@ -202,6 +202,9 @@
         padding: 1rem;
     }
     .book-now-button-class {
+        display: flex;
+        text-align: center;
+        justify-content: center;
         position: relative;
         top: 7px;
     }
