@@ -849,3 +849,48 @@ button:hover {
         width: 100%;
     }
 }
+
+/* IntlTelInput Custom Styles */
+.iti {
+    width: 100%;
+    position: relative;
+}
+
+.iti__country-list {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.iti__country {
+    padding: 8px 10px !important;
+}
+
+.iti__country:hover {
+    background-color: #333 !important;
+}
+
+.iti__selected-flag {
+    background-color: transparent !important;
+}
+
+.iti__selected-dial-code {
+    color: #fff !important;
+}
+
+.iti__country-name {
+    color: #fff !important;
+}
+
+/* Fix for the input field */
+.phone-group input {
+    padding-left: 80px !important;
+}
+
+.phone-group .iti--separate-dial-code {
+    width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}

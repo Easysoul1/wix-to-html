@@ -25,7 +25,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Initialize phone input
+    const phoneInputField = document.querySelector("#phone");
+    if (phoneInputField) {
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            preferredCountries: ["us", "gb", "ca"],
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+            separateDialCode: true,
+            formatOnDisplay: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch("https://ipapi.co/json")
+                    .then(function(res) { return res.json(); })
+                    .then(function(data) { callback(data.country_code); })
+                    .catch(function() { callback("us"); });
+            }
+        });
+
+        // Add validation on form submit
+        const form = phoneInputField.closest('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                if (!phoneInput.isValidNumber()) {
+                    e.preventDefault();
+                    alert('Please enter a valid phone number.');
+                }
+            });
+        }
+
+        // Store the instance
+        window.phoneInput = phoneInput;
+    }
 });
+
 const testimonials = document.querySelectorAll('.testimonial-content');
 const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');
@@ -56,16 +88,19 @@ showTestimonial(currentIndex);
 document.addEventListener('DOMContentLoaded', function() {
     const phoneInput = document.querySelector("#phone");
     if (phoneInput) {
-        window.intlTelInput(phoneInput, {
+        const iti = window.intlTelInput(phoneInput, {
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
             separateDialCode: true,
             initialCountry: "auto",
             geoIpLookup: function(callback) {
                 fetch("https://ipapi.co/json")
-                    .then(function(res) { return res.json(); })
-                    .then(function(data) { callback(data.country_code); })
-                    .catch(function() { callback("us"); });
+                    .then(res => res.json())
+                    .then(data => callback(data.country_code))
+                    .catch(() => callback("us"));
             },
         });
+
+        // Store iti instance on the input
+        phoneInput._iti = iti;
     }
 });
