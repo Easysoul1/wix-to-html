@@ -652,6 +652,14 @@ h1 {
         right: auto;
         margin-right: 0;
     }
+    .logo {
+        gap: 20px; /* Reduce gap on mobile */
+    }
+
+    /* Hide login button in header on mobile */
+    .logo .login-btn {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

@@ -774,8 +774,7 @@ h1 {
     .testimonial-wrapper {
         padding: 20px 0;
     }
-
-    /* Footer adjustments
+    
     .footer {
         padding: 30px 20px;
         margin: 0;
@@ -783,7 +782,7 @@ h1 {
 
     .footer-content {
         gap: 20px;
-    } */
+    }
 
     /* Mobile menu adjustments */
     .mobile-menu-content {
