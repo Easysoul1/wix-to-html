@@ -413,9 +413,9 @@ textarea:focus {
 
 button {
     align-self: center;
-    background: transparent;
-    border: none;
-    
+    background: #b08d57;
+    border: 1px solid #333;
+    border-radius: 3px;
     padding: 1rem 2rem;
     font-size: 0.9rem;
     cursor: pointer;
@@ -424,6 +424,7 @@ button {
 }
 
 button:hover {
+    color: #fff;
     opacity: 0.7;
 }
 
@@ -874,7 +875,7 @@ button:hover {
 }
 
 .iti__selected-dial-code {
-    color: #fff !important;
+    color: #142fc5 !important;
 }
 
 .iti__country-name {
@@ -893,4 +894,9 @@ button:hover {
 .iti--separate-dial-code .iti__selected-flag {
     background-color: transparent !important;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.iti__flag-container {
+    background-color: transparent !important;
+    border: none !important;
 }
