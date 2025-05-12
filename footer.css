@@ -118,8 +118,13 @@
     border: 1px solid #fff; /* White border */
     transition: all 0.3s ease;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     position: relative;
-    left: 700px;
+    left: 800px;
+    margin-top: 20px;
 }
 
 .social-icon {
@@ -191,22 +196,22 @@
 
     .book-now-button {
         display: block;
-        position: relative;
-        left: 0;
         text-align: center;
         justify-content: center;
-        right: 0;
-        width: 100%;
-        margin: 1rem auto;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px 20px; /* Adjust padding for mobile */
+        text-decoration: none;
         text-align: center;
+        position: relative;
+        left: -18px;
         padding: 1rem;
     }
     .book-now-button-class {
         display: flex;
         text-align: center;
         justify-content: center;
-        position: relative;
-        top: 7px;
     }
 
     .book-now-btn {
