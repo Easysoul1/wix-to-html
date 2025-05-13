@@ -1,13 +1,11 @@
-
-
 /* Footer styles */
 .footer {
     background-color: #AF9453;
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 20px;
     margin: 50px;
     width: 90%;
-    margin: auto;
+    margin: 30px auto;
     font-family: "Brandon", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -53,9 +51,9 @@
 .left-footer {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: column;
-    height: 300px;
+    height: 200px;
 }
 
 .vertical-line {
@@ -98,10 +96,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     margin-right: 53px;
-    margin-top: 3.2rem;
+    margin-top: 2rem;
     border-radius: 50%;
     border: 1px solid #AF9453; 
     color: #AF9453; 
@@ -156,78 +154,76 @@
 
 
 @media (max-width: 768px) {
-	
-	/* Footer adjustments */
     .footer {
-        padding: 30px 20px;
-        margin: 0;
-    }
-
-    .footer-content {
-        gap: 20px;
-    }
-    .book-now-container {
-        position: relative;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
+        background-color: #AF9453;
         width: 100%;
-    }
-
-    /* Footer Styles */
-    .footer {
-        flex-direction: column; /* Stack content vertically */
-        padding: 20px;
+        margin: 0;
+        padding: 2rem;
         text-align: center;
     }
 
     .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 20px; /* Add spacing between sections */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
     }
 
     .footer-section {
-        position: static; /* Remove relative positioning */
+        padding: 0;
+        text-align: center;
     }
 
-    .footer-section:not(:last-child)::after {
-        content: none; /* Remove the line between sections */
+    .footer-section::after {
+        display: none;
     }
 
     .footer-social-icons {
-        margin-top: 20px;
+        display: flex;
         justify-content: center;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
     }
 
-    .vertical-line {
-        display: none; /* Hide vertical line on mobile */
+    .footer-social-icons a {
+        color: #fff;
+        font-size: 1.2rem;
     }
 
     .book-now-button {
-        display: block;
-        text-align: center;
-        justify-content: center;
-        width: auto;
-        height: auto;
-        margin: 0 auto;
-        padding: 10px 20px; /* Adjust padding for mobile */
-        text-decoration: none;
-        text-align: center;
-        position: relative;
-        left: -18px;
-        padding: 1rem;
-    }
-    .book-now-button-class {
-        display: flex;
-        text-align: center;
-        justify-content: center;
+        width: 100%;
+        max-width: 200px;
+        margin: 1rem auto;
+        padding: 0.8rem;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.9rem;
     }
 
     .book-now-btn {
-        display: hidden;
+        display: none;
+    }
+
+    .left-footer, 
+    .right-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: auto;
     }
 
     .vertical-line {
         display: none;
+    }
+
+    /* Copyright text */
+    .footer-section:last-child {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 1rem;
     }
 }
