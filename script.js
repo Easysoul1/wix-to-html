@@ -63,27 +63,45 @@ const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');
 let currentIndex = 0;
 
-function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-        testimonial.classList.remove('active');
-        if (i === index) {
-            testimonial.classList.add('active');
-        }
+function showTestimonial(nextIndex, direction = 'right') {
+    const current = testimonials[currentIndex];
+    const next = testimonials[nextIndex];
+
+    // Remove existing "active" from current
+    current.classList.remove('active');
+
+    // Add exit class
+    current.classList.add(direction === 'right' ? 'exiting-left' : 'exiting-right');
+
+    // After transition, clean up
+    setTimeout(() => {
+        current.classList.remove('exiting-left', 'exiting-right');
+        current.style.display = 'none'; // hide the old one
+    }, 1000); // should match CSS transition time
+
+    // Prepare next
+    next.style.display = 'block'; // make it visible so transition works
+    requestAnimationFrame(() => {
+        next.classList.add('active'); // trigger transition
     });
+
+    currentIndex = nextIndex;
 }
 
 leftArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
+    const nextIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(nextIndex, 'left');
 });
 
 rightArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
+    const nextIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(nextIndex, 'right');
 });
 
 // Initialize the first testimonial
-showTestimonial(currentIndex);
+testimonials[currentIndex].style.display = 'block';
+testimonials[currentIndex].classList.add('active');
+
 // Phone input initialization
 document.addEventListener('DOMContentLoaded', function() {
     const phoneInput = document.querySelector("#phone");
