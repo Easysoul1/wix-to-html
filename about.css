@@ -788,3 +788,147 @@ header {
         align-items: center;
     }
 }
+
+.mobile-nav-item {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-nav-item > a {
+    display: block;
+    padding: 10px 0;
+    color: #4b5563;
+    font-size: 1.125rem;
+    transition: color 0.3s;
+}
+
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.mobile-nav-item.active .mobile-dropdown {
+    display: flex;
+}
+
+.mobile-dropdown-link {
+    color: #666;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.mobile-dropdown-link:hover {
+    color: #AF9453;
+}
+
+.mobile-nav-item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.services-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.services-toggle .arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    background: #fff;
+}
+
+.mobile-nav-item.active .mobile-dropdown {
+    display: flex;
+}
+
+.mobile-dropdown a {
+    padding: 8px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.mobile-dropdown a:hover {
+    color: #AF9453;
+}
+
+/* Close button styles */
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.3s ease;
+    z-index: 201;
+}
+
+.close-menu-btn:hover {
+    color: #AF9453;
+}
+
+/* Mobile menu arrow styles */
+.services-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    font-size: 1.125rem;
+}
+
+.services-toggle .arrow {
+    display: inline-block;
+    color: #4b5563;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Ensure mobile menu styles don't conflict */
+@media (max-width: 768px) {
+    .testimonial-container .arrow {
+        display: none; /* Hide only testimonial arrows */
+    }
+
+    .services-toggle .arrow {
+        display: inline-block; /* Keep services dropdown arrow visible */
+    }
+}
+
+.arrow-img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
