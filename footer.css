@@ -31,15 +31,7 @@
     font-style: normal;
     padding-right: 30px;
 }
-.footer-section::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    /* transform: translateY(-50%); */
-    height: 50px; /* shorter border */
-    border-right: 1px solid #fff;
-}
+
 
 .right-footer {
     display: flex;
