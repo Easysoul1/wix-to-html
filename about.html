@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="scroll-animate.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="scroll-animate.css" />
     <title>About Us</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <a href="/">
-                <span class="logo-icon">
-                    <img src="assets/icon.jpg" alt="Twilight Events Logo">
-                </span>
-                <span class="logo-text">TWILIGHT EVENTS</span>
-            </a>
-            <!-- <a href="/login" class="login-btn">
+      <div class="logo">
+        <a href="/">
+          <span class="logo-icon">
+            <img src="assets/icon.jpg" alt="Twilight Events Logo" />
+          </span>
+          <span class="logo-text">TWILIGHT EVENTS</span>
+        </a>
+        <!-- <a href="/login" class="login-btn">
                 <div class="user-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.5"/>
@@ -25,40 +25,67 @@
                 </div>
                 <span class="login-text">Log In</span>
             </a> -->
-        </div>
-    
-          <div class="nav-container">
-            <nav class="desktop-nav">
-                <a href="index.html">Home</a>
-                <div class="nav-item">
-                    <a href="services.html">Services</a>
-                    <div class="dropdown">
-                        <a href="services.html#wedding" class="dropdown-link">Wedding</a>
-                        <a href="services.html#private-parties" class="dropdown-link">Private</a>
-                        <a href="services.html#corporate" class="dropdown-link">Corporate</a>
-                    </div>
-                </div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    
-        <button class="mobile-menu-btn" aria-label="Open menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-        </button>
+      </div>
+
+      <div class="nav-container">
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a>
+          <div class="nav-item">
+            <a href="services.html">Services</a>
+            <div class="dropdown">
+              <a href="services.html#wedding" class="dropdown-link">Wedding</a>
+              <a href="services.html#private-parties" class="dropdown-link"
+                >Private</a
+              >
+              <a href="services.html#corporate" class="dropdown-link"
+                >Corporate</a
+              >
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
     </header>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <button class="close-menu-btn" aria-label="Close menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <div class="mobile-menu-content">
-            <!-- <a href="/login" class="login-btn">
+      <button class="close-menu-btn" aria-label="Close menu">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div class="mobile-menu-content">
+        <!-- <a href="/login" class="login-btn">
                 <div class="user-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.5"/>
@@ -67,87 +94,125 @@
                 </div>
                 <span>Log In</span>
             </a> -->
-            <nav>
-                <a href="/">Home</a>
-                <div class="mobile-nav-item">
-                    <div class="services-toggle">
-                        <a href="services.html">Services</a>
-                        <span class="dropdown-trigger arrow"><img src="./assets/arrow-down.png" alt="drop down" class="arrow-img"></span> 
-                    </div>
-                    <div class="mobile-dropdown">
-                        <a href="services.html#wedding">Weddings</a>
-                        <a href="services.html#private-parties">Private Parties</a>
-                        <a href="services.html#corporate">Corporate Events</a>
-                    </div>
-                </div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+        <nav>
+          <a href="/">Home</a>
+          <div class="mobile-nav-item">
+            <div class="services-toggle">
+              <a href="services.html">Services</a>
+              <span class="dropdown-trigger arrow"
+                ><img
+                  src="./assets/arrow-down.png"
+                  alt="drop down"
+                  class="arrow-img"
+              /></span>
+            </div>
+            <div class="mobile-dropdown">
+              <a href="services.html#wedding">Weddings</a>
+              <a href="services.html#private-parties">Private Parties</a>
+              <a href="services.html#corporate">Corporate Events</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </div>
 
     <section class="about-section scroll-animate">
-        <div class="about-container">
-            <!-- Left Image Section -->
-            <div class="about-image">
-                <img src="https://static.wixstatic.com/media/dfde9aaa87d84facb2e604d3add0bded.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dfde9aaa87d84facb2e604d3add0bded.jpg" alt="About Us Image">
-            </div>
-
-            <!-- Right Text Section -->
-            <div class="about-text scroll-animate">
-                <h2 class="about-title">A B O U T &nbsp; U S</h2>
-                <div class="quote-mark">“</div>
-                <blockquote class="about-quote">Making Dreams <br> <span class="about-quote-span">Come True</span></blockquote>
-                <p class="about-description">
-                    I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.
-                </p>
-                <p class="about-author">Jessica Moore</p>
-                <p class="about-role">Co-Founder & Creative Director</p>
-            </div>
+      <div class="about-container">
+        <!-- Left Image Section -->
+        <div class="about-image">
+          <img
+            src="https://static.wixstatic.com/media/dfde9aaa87d84facb2e604d3add0bded.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dfde9aaa87d84facb2e604d3add0bded.jpg"
+            alt="About Us Image"
+          />
         </div>
+
+        <!-- Right Text Section -->
+        <div class="about-text scroll-animate">
+          <h2 class="about-title">A B O U T &nbsp; U S</h2>
+          <div class="quote-mark">“</div>
+          <blockquote class="about-quote">
+            Making Dreams <br />
+            <span class="about-quote-span">Come True</span>
+          </blockquote>
+          <p class="about-description">
+            I'm a paragraph. Click here to add your own text and edit me. It's
+            easy. Just click "Edit Text" or double click me to add your own
+            content and make changes to the font.
+          </p>
+          <p class="about-author">Jessica Moore</p>
+          <p class="about-role">Co-Founder & Creative Director</p>
+        </div>
+      </div>
     </section>
 
     <section class="about-section-alt scroll-animate">
-        <div class="about-container-alt">
-            <!-- Left Text Section -->
-            <div class="about-text-alt">
-                <div class="quote-mark-alt">“</div>
-                <blockquote class="about-quote-alt">Turning a Vision <br> <span class="about-quote-span-alt">into Reality</span></blockquote>
-                <p class="about-description-alt">
-                    I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.
-                </p>
-                <p class="about-author-alt">Angela Bradshow</p>
-                <p class="about-role-alt">Co-Founder & Creative Director</p>
-            </div>
-
-            <!-- Right Image Section -->
-            <div class="about-image-alt">
-                <img src="https://static.wixstatic.com/media/1539353e77c74ec293230ccc605608c7.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1539353e77c74ec293230ccc605608c7.jpg" alt="Angela Bradshow">
-            </div>
+      <div class="about-container-alt">
+        <!-- Left Text Section -->
+        <div class="about-text-alt">
+          <div class="quote-mark-alt">“</div>
+          <blockquote class="about-quote-alt">
+            Turning a Vision <br />
+            <span class="about-quote-span-alt">into Reality</span>
+          </blockquote>
+          <p class="about-description-alt">
+            I'm a paragraph. Click here to add your own text and edit me. It's
+            easy. Just click "Edit Text" or double click me to add your own
+            content and make changes to the font.
+          </p>
+          <p class="about-author-alt">Angela Bradshow</p>
+          <p class="about-role-alt">Co-Founder & Creative Director</p>
         </div>
+
+        <!-- Right Image Section -->
+        <div class="about-image-alt">
+          <img
+            src="https://static.wixstatic.com/media/1539353e77c74ec293230ccc605608c7.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1539353e77c74ec293230ccc605608c7.jpg"
+            alt="Angela Bradshow"
+          />
+        </div>
+      </div>
     </section>
 
     <section class="about-section-third scroll-animate">
-        <div class="about-container-third">
-            <!-- Left Image Section -->
-            <div class="about-image-third">
-                <img src="https://static.wixstatic.com/media/0c2e668de06c4f2e975eafbd9f535d0e.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0c2e668de06c4f2e975eafbd9f535d0e.jpg" alt="Remy Sellers">
-            </div>
-
-            <!-- Right Text Section -->
-            <div class="about-text-third">
-                <div class="quote-mark-third">“</div>
-                <blockquote class="about-quote-third">A Perfectionist on <br> <span class="about-quote-span-third">Every Detail</span></blockquote>
-                <p class="about-description-third">
-                    I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.
-                </p>
-                <p class="about-author-third">Remy Sellers</p>
-                <p class="about-role-third">Co-Founder & Creative Director</p>
-            </div>
+      <div class="about-container-third">
+        <!-- Left Image Section -->
+        <div class="about-image-third">
+          <img
+            src="https://static.wixstatic.com/media/0c2e668de06c4f2e975eafbd9f535d0e.jpg/v1/fill/w_382,h_442,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0c2e668de06c4f2e975eafbd9f535d0e.jpg"
+            alt="Remy Sellers"
+          />
         </div>
+
+        <!-- Right Text Section -->
+        <div class="about-text-third">
+          <div class="quote-mark-third">“</div>
+          <blockquote class="about-quote-third">
+            A Perfectionist on <br />
+            <span class="about-quote-span-third">Every Detail</span>
+          </blockquote>
+          <p class="about-description-third">
+            I'm a paragraph. Click here to add your own text and edit me. It's
+            easy. Just click "Edit Text" or double click me to add your own
+            content and make changes to the font.
+          </p>
+          <p class="about-author-third">Remy Sellers</p>
+          <p class="about-role-third">Co-Founder & Creative Director</p>
+        </div>
+      </div>
     </section>
     <script src="footer-loader.js"></script>
     <script src="scroll-animate.js"></script>
     <script src="script.js"></script>
-</body>
+    <link rel="stylesheet" href="whatsapp-float.css" />
+    <div id="whatsapp-float-container"></div>
+    <script>
+      fetch("whatsapp-float.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("whatsapp-float-container").innerHTML = html;
+        });
+    </script>
+  </body>
 </html>
