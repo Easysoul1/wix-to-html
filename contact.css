@@ -10,12 +10,18 @@ body {
     line-height: 1.6;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
     position: fixed;
     top: 0;
@@ -31,6 +37,7 @@ header {
     z-index: 100;
 }
 
+/* Logo Styles */
 .logo {
     display: flex;
     align-items: center;
@@ -42,11 +49,15 @@ header {
 .logo a {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-icon {
-    color: #b45309;
-    margin-right: 8px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .logo-icon img {
@@ -66,38 +77,12 @@ header {
     text-transform: uppercase;
 }
 
+/* Navigation Styles */
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     margin-right: 50px;
-}
-
-.login-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
-    margin-right: 1rem;
-    font-size: 16px;
-}
-
-.login-btn:hover {
-    color: #b08d57;
-}
-
-.user-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #AF9453;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin-right: 5px; 
 }
 
 .desktop-nav {
@@ -106,13 +91,14 @@ header {
 }
 
 .desktop-nav a {
-    color: #4b5563; /* gray-600 */
+    text-decoration: none;
+    color: #4b5563;
     font-size: 0.875rem;
     transition: color 0.2s;
 }
 
 .desktop-nav a:hover {
-    color: #b45309; /* amber-700 */
+    color: #b45309;
 }
 .nav-item {
     position: relative;
@@ -183,8 +169,49 @@ header {
         padding: 0.5rem 2rem;
     }
 }
-/* Mobile menu */
+/* Login Button Styles */
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #b08d57;
+}
+
+.login-btn span {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.user-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #AF9453;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 5px; /* Adjust spacing between the user icon and text */
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563;
+    padding: 8px;
+}
+
 .mobile-menu {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -192,7 +219,6 @@ header {
     bottom: 0;
     background-color: white;
     z-index: 200;
-    display: none;
     flex-direction: column;
 }
 
@@ -217,6 +243,23 @@ header {
     flex: 1;
 }
 
+.mobile-menu-content nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-content a:hover {
+    color: #b08d57;
+}
+
 .mobile-menu-content .login-btn {
     display: flex;
     align-items: center;
@@ -229,59 +272,11 @@ header {
     color: #b08d57;
 }
 
-.mobile-menu-content nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+.mobile-menu-content .user-icon {
+    width: 24px;
+    height: 24px;
 }
 
-.mobile-menu-content nav a {
-    color: #4b5563; /* gray-600 */
-    font-size: 1.125rem;
-    transition: color 0.2s;
-}
-
-.mobile-menu-content nav a:hover {
-    color: #b45309; /* amber-700 */
-}
-
-/* Mobile menu button */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    color: #4b5563;
-    transition: color 0.3s ease;
-}
-
-.mobile-menu-btn:hover {
-    color: #AF9453;
-}
-
-.mobile-menu-btn svg {
-    stroke: currentColor;
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .logo {
-        gap: 20px;
-    }
-
-    .logo .login-btn {
-        display: none;
-    }
-}
 
 /* Contact Section */
 .contact-section {
@@ -949,6 +944,81 @@ button:hover {
     .iti__flag-container {
         margin-top: 0;
     }
+
+    /* Style login button in mobile menu */
+    .mobile-menu-content .login-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #4b5563;
+        margin: 20px 0;
+    }
+
+    .mobile-menu-content .login-btn:hover {
+        color: #b08d57;
+    }
+
+    .mobile-menu-content .user-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 200;
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 20px;
+    }
+
+    .dropdown {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+    }
+
+    .nav-item:hover .dropdown {
+        display: block;
+    }
+
+    .dropdown {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+    }
+
+    .nav-item:hover .dropdown {
+        display: block;
+    }
+    
+    .dropdown-link {
+        padding: 0.5rem 2rem;
+    }
 }
 
 /* Textarea specific styles */
@@ -1033,19 +1103,7 @@ button:hover {
     position: relative;
 }
 
-.services-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    padding: 10px 0;
-    cursor: pointer;
-}
 
-.services-toggle .arrow {
-    font-size: 12px;
-    transition: transform 0.3s ease;
-}
 
 .mobile-nav-item.active .arrow {
     transform: rotate(180deg);
@@ -1096,23 +1154,7 @@ button:hover {
     color: #AF9453;
 }
 
-/* Mobile menu arrow styles */
-.services-toggle {
-    position: relative;
-    display: flex;
-    align-items: center;
 
-    color: #4b5563;
-    font-size: 1.125rem;
-}
-
-.services-toggle .arrow {
-    display: inline-flex;
-    color: #4b5563;
-    align-items: center;
-    font-size: 12px;
-    transition: transform 0.3s ease;
-}
 
 .mobile-nav-item.active .arrow {
     transform: rotate(180deg);
@@ -1129,17 +1171,21 @@ button:hover {
     }
 }
 
-.arrow-img {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
+/* Mobile menu arrow styles */
 .services-toggle {
+    position: relative; /* Make the container a positioning context */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.services-toggle .arrow {
+    display: inline-block;
+    color: #AF9453;
+    font-size: 12px;
+    margin-left: 2px; /* Use a small margin for spacing */
+    transition: transform 0.3s ease;
 }
 
 .services-link {
@@ -1149,6 +1195,9 @@ button:hover {
     padding: 10px 0;
 }
 
+.services {
+    margin-left: 100px;
+}
 .dropdown-trigger {
     cursor: pointer;
     padding: 10px;
@@ -1156,7 +1205,17 @@ button:hover {
 }
 
 .arrow-img {
-    width: 12px;
-    height: 12px;
+    position: absolute;
+    right: 10px; /* Position the arrow 10px from the right edge */
+    width: 20px;
+    height: 20px;
     transition: transform 0.3s ease;
+}
+
+.services-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: -20px;
+    width: 110%;
 }
