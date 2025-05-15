@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Store the instance
     window.phoneInput = phoneInput;
   }
-
-  // Add this to your existing script.js
   document.addEventListener("DOMContentLoaded", function () {
     const mobileNavItem = document.querySelector(".mobile-nav-item");
     const servicesLink = mobileNavItem.querySelector("a");
@@ -75,10 +73,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   // Services dropdown toggle
-  const servicesToggle = document.querySelector(".services-toggle");
-  if (servicesToggle) {
-    servicesToggle.addEventListener("click", function (e) {
-      e.preventDefault();
+  // const servicesToggle = document.querySelector(".services-toggle");
+  // if (servicesToggle) {
+  //   servicesToggle.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     const mobileNavItem = this.closest(".mobile-nav-item");
+  //     mobileNavItem.classList.toggle("active");
+  //   });
+ // }
+  const dropdownTrigger = document.querySelector(".dropdown-trigger");
+  if (dropdownTrigger) {
+    dropdownTrigger.addEventListener("click", function (e) {
+      e.preventDefault(); // prevent anything unwanted
       const mobileNavItem = this.closest(".mobile-nav-item");
       mobileNavItem.classList.toggle("active");
     });
