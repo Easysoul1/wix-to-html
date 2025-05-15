@@ -356,12 +356,34 @@ h1 {
 
 .category-title {
     text-align: center;
-    font-size: 1.5rem;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    font-family: inherit;
     font-weight: 300;
     letter-spacing: 0.3em;
     color: #AF9453;
-    margin-bottom: 3rem;
     line-height: 1.4;
+}
+
+.category-title-line {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 0.18em;
+    font-weight: 300;
+    color: #222;
+}
+
+@media (max-width: 767px) {
+    .category-title {
+        margin-bottom: 1.5rem;
+    }
+    .category-title-line {
+        font-size: 1.3rem;
+        letter-spacing: 0.18em;
+        font-weight: 300;
+        color: #222;
+    }
 }
 
 /* Medium screens */
@@ -376,17 +398,23 @@ h1 {
 @media screen and (max-width: 767px) {
     .category-title {
         font-size: 1.1rem;
+        font-weight: 300;
         letter-spacing: 0.2em;
         padding: 0 10px;
+        margin-right: 20px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .category-title[data-title="PRIVATE PARTIES"] {
-        content: "P R I V A T E\A P A R T I E S";
+        content: "P R I V A T E P A R T I E S";
         white-space: pre;
     }
 
     .category-title[data-title="CORPORATE EVENTS"] {
-        content: "C O R P O R A T E\A E V E N T S";
+        content: "C O R P O R A T E E V E N T S";
         white-space: pre;
     }
 }
@@ -1062,13 +1090,4 @@ h1 {
     height: 20px;
     margin-left: 5px;
     transition: transform 0.3s ease;
-}
-
-@media (max-width: 600px) {
-  .category-title {
-    font-size: 1.2rem; /* Adjust as needed */
-    letter-spacing: 0.1em;
-    text-align: center;
-    word-break: break-word;
-  }
 }
