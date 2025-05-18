@@ -6,14 +6,9 @@
 }
 
 body {
-    color: #fff;
+    font-family: 'Inter', sans-serif;
+    color: #333;
     line-height: 1.6;
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    position: relative;
 }
 
 a {
@@ -168,6 +163,10 @@ header {
     .dropdown-link {
         padding: 0.5rem 2rem;
     }
+
+    .logo {
+        margin-right: 20px;
+    }
 }
 /* Login Button Styles */
 .login-btn {
@@ -277,6 +276,112 @@ header {
     height: 24px;
 }
 
+/* Mobile nav item styles */
+.mobile-nav-item {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-nav-item > a {
+    display: block;
+    padding: 10px 0;
+    color: #4b5563;
+    font-size: 1.125rem;
+    transition: color 0.3s;
+}
+
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.mobile-nav-item.active .mobile-dropdown {
+    display: flex;
+}
+
+.mobile-dropdown-link {
+    color: #666;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.mobile-dropdown-link:hover {
+    color: #AF9453;
+}
+
+.services-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.services-toggle .arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    background: #fff;
+}
+
+.mobile-nav-item.active .mobile-dropdown {
+    display: flex;
+}
+
+.mobile-dropdown a {
+    padding: 8px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.mobile-dropdown a:hover {
+    color: #AF9453;
+}
+
+/* Close button styles */
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.3s ease;
+    z-index: 201;
+}
+
+.close-menu-btn:hover {
+    color: #AF9453;
+}
+
+.arrow-img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
 
 /* Contact Section */
 .contact-section {
@@ -532,23 +637,6 @@ button:hover {
     transition: color 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-    }
-
-    .contact-left,
-    .contact-right {
-        width: 100%;
-    }
-
-    .form-row {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
 /* Twilight Info Section */
 .twilight-info {
     display: flex;
@@ -620,240 +708,6 @@ button:hover {
     display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .twilight-info {
-        flex-direction: column;
-    }
-
-    .info-left {
-        padding: 40px 20px;
-    }
-
-    .info-right {
-        height: 400px;
-    }
-
-    .info-title {
-        font-size: 18px;
-        letter-spacing: 6px;
-    }
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-container {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    h1 {
-        font-size: 2.25rem;
-    }
-    
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .services-container {
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 1025px) {
-    h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Prevent horizontal scroll */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    /* Contact section adjustments */
-    .contact-section {
-        flex-direction: column;
-        margin: 80px 0 0 0;
-        gap: 0;
-        width: 100%;
-    }
-
-    /* Left side adjustments */
-    .contact-left {
-        width: 100%;
-        position: static;
-        left: 0;
-        margin: 0;
-        padding: 40px 20px;
-    }
-
-    /* Right side adjustments */
-    .contact-right {
-        width: 100%;
-        position: static;
-        left: 0;
-        margin: 0;
-        padding: 40px 20px;
-    }
-
-    /* Form adjustments */
-    .contact-form {
-        width: 100%;
-        padding: 0;
-    }
-
-    /* Twilight info section adjustments */
-    .twilight-info {
-        margin: 0;
-        width: 100%;
-    }
-
-    .info-left {
-        width: 100%;
-        margin: 0;
-        right: 0;
-        padding: 40px 20px;
-    }
-
-    .info-right {
-        width: 100%;
-    }
-
-    .info-right img {
-        width: 100%;
-        height: auto;
-        position: static;
-        left: 0;
-        top: 0;
-    }
-
-    /* Phone input adjustments */
-    .phone-group {
-        width: 100%;
-    }
-
-    .form-row {
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        width: 100%;
-    }
-}
-
-/* Update the existing mobile styles for navbar */
-@media (max-width: 768px) {
-    /* Prevent horizontal scroll and set base styles */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    /* Header adjustments */
-    header {
-        padding: 10px 15px;
-        width: 100%;
-        height: 70px;
-    }
-
-    /* Logo adjustments */
-    .logo-text {
-        font-size: 0.75rem;
-    }
-
-    /* Navigation container */
-    .nav-container {
-        display: none;
-        max-width: max-content;
-    }
-
-    /* Mobile menu button */
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    /* Mobile menu styling */
-    .mobile-menu {
-        width: 100%;
-        height: 100vh;
-        padding: 20px;
-    }
-
-    .mobile-menu-content {
-        padding: 20px;
-    }
-
-    .mobile-menu-content nav {
-        width: 100%;
-    }
-
-    .mobile-menu-content .login-btn {
-        margin: 0 0 2rem 0;
-    }
-
-    .mobile-menu-content nav a {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    /* Adjust the close button position */
-    .close-menu-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-}
-
-/* Mobile menu button styles */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    color: #333;
-}
-
-/* Update your media query */
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        position: relative;
-        z-index: 100;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        width: 100%;
-    }
-    
-}
-
 /* IntlTelInput Custom Styles */
 .iti {
     width: 100%;
@@ -904,123 +758,6 @@ button:hover {
     border: none !important;
 }
 
-/* IntlTelInput Custom Mobile Styles */
-@media (max-width: 768px) {
-    .iti__country-list {
-        max-height: 400px !important; 
-        width: 250px !important;
-        max-width: 90vw !important; 
-        left: 0 !important; 
-        top: 20px !important; 
-    }
-
-    .iti__country {
-        padding: 5px 8px !important; /* Reduce padding */
-        min-height: 35px !important; /* Reduce height of each item */
-    }
-
-    .iti__country-name {
-        font-size: 14px !important; /* Smaller font */
-    }
-
-    .iti__dial-code {
-        font-size: 13px !important; /* Smaller font for dial code */
-    }
-
-    .iti__flag {
-        transform: scale(0.8); /* Slightly smaller flags */
-    }
-
-    .iti__selected-flag {
-        padding: 0 8px !important; /* Reduce flag container padding */
-    }
-
-    .phone-group .iti {
-        margin-top: 0;
-    }
-    .phone-group {
-        margin-top: 5px;
-    }
-    .iti__flag-container {
-        margin-top: 0;
-    }
-
-    /* Style login button in mobile menu */
-    .mobile-menu-content .login-btn {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #4b5563;
-        margin: 20px 0;
-    }
-
-    .mobile-menu-content .login-btn:hover {
-        color: #b08d57;
-    }
-
-    .mobile-menu-content .user-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: white;
-        z-index: 200;
-        display: none;
-        flex-direction: column;
-    }
-
-    .mobile-menu.active {
-        display: flex;
-    }
-
-    .mobile-menu-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-        padding: 20px;
-    }
-
-    .dropdown {
-        position: static;
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        display: none;
-    }
-
-    .nav-item:hover .dropdown {
-        display: block;
-    }
-
-    .dropdown {
-        position: static;
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        display: none;
-    }
-
-    .nav-item:hover .dropdown {
-        display: block;
-    }
-    
-    .dropdown-link {
-        padding: 0.5rem 2rem;
-    }
-}
-
 /* Textarea specific styles */
 .input-group textarea {
     width: 100%;
@@ -1061,161 +798,196 @@ button:hover {
     color: transparent;
 }
 
-.mobile-nav-item {
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-
-.mobile-nav-item > a {
-    display: block;
-    padding: 10px 0;
-    color: #4b5563;
-    font-size: 1.125rem;
-    transition: color 0.3s;
-}
-
-.mobile-dropdown {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 0;
-}
-
-.mobile-nav-item.active .mobile-dropdown {
-    display: flex;
-}
-
-.mobile-dropdown-link {
-    color: #666;
-    font-size: 1rem;
-    padding: 8px 0;
-    transition: color 0.3s;
-}
-
-.mobile-dropdown-link:hover {
-    color: #AF9453;
-}
-
-.mobile-nav-item {
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-
-
-.mobile-nav-item.active .arrow {
-    transform: rotate(180deg);
-}
-
-.mobile-dropdown {
-    display: none;
-    flex-direction: column;
-    padding: 10px 0;
-    background: #fff;
-}
-
-.mobile-nav-item.active .mobile-dropdown {
-    display: flex;
-}
-
-.mobile-dropdown a {
-    padding: 8px 0;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.mobile-dropdown a:hover {
-    color: #AF9453;
-}
-
-/* Close button styles */
-.close-menu-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4b5563;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: color 0.3s ease;
-    z-index: 201;
-}
-
-.close-menu-btn:hover {
-    color: #AF9453;
-}
-
-
-
-.mobile-nav-item.active .arrow {
-    transform: rotate(180deg);
-}
-
-/* Ensure mobile menu styles don't conflict */
+/* Responsive styles */
 @media (max-width: 768px) {
-    .testimonial-container .arrow {
-        display: none; /* Hide only testimonial arrows */
+    /*header {
+        padding-right: 35px;
+    }*/
+    .nav-container {
+        display: none;
     }
 
-    .services-toggle .arrow {
-        display: inline-block; /* Keep services dropdown arrow visible */
+    .mobile-menu-btn {
+        display: block;
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Contact section adjustments */
+    .contact-section {
+        flex-direction: column;
+        margin: 80px 0 0 0;
+        gap: 0;
+        width: 100%;
+    }
+
+    /* Left side adjustments */
+    .contact-left {
+        width: 100%;
+        position: static;
+        left: 0;
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    /* Right side adjustments */
+    .contact-right {
+        width: 100%;
+        position: static;
+        left: 0;
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    /* Form adjustments */
+    .contact-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Form row adjustments */
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    /* Twilight info section adjustments */
+    .twilight-info {
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .info-left {
+        width: 100%;
+        margin: 0;
+        right: 0;
+        padding: 40px 20px;
+    }
+
+    .info-right {
+        width: 100%;
+    }
+
+    .info-right img {
+        width: 100%;
+        height: auto;
+        position: static;
+        left: 0;
+        top: 0;
+    }
+
+    /* IntlTelInput Custom Mobile Styles */
+    .iti__country-list {
+        max-height: 400px !important; 
+        width: 250px !important;
+        max-width: 90vw !important; 
+        left: 0 !important; 
+        top: 20px !important; 
+    }
+
+    .iti__country {
+        padding: 5px 8px !important; /* Reduce padding */
+        min-height: 35px !important; /* Reduce height of each item */
+    }
+
+    .iti__country-name {
+        font-size: 14px !important; /* Smaller font */
+    }
+
+    .iti__dial-code {
+        font-size: 13px !important; /* Smaller font for dial code */
+    }
+
+    .iti__flag {
+        transform: scale(0.8); /* Slightly smaller flags */
+    }
+
+    .iti__selected-flag {
+        padding: 0 8px !important; /* Reduce flag container padding */
+    }
+
+    .phone-group .iti {
+        margin-top: 0;
+    }
+    
+    .phone-group {
+        margin-top: 5px;
+    }
+    
+    .iti__flag-container {
+        margin-top: 0;
+    }
+
+    /* Mobile menu styles */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 200;
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 20px;
+    }
+
+    .close-menu-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4b5563;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        transition: color 0.3s ease;
+        z-index: 201;
+    }
+
+    .close-menu-btn:hover {
+        color: #AF9453;
     }
 }
 
-/* Mobile menu arrow styles */
-.services-toggle {
-    position: relative; /* Make the container a positioning context */
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
 }
 
-.services-toggle .arrow {
-    display: inline-block;
-    color: #AF9453;
-    font-size: 12px;
-    margin-left: 2px; /* Use a small margin for spacing */
-    transition: transform 0.3s ease;
-}
-
-.services-link {
-    color: #4b5563;
-    text-decoration: none;
-    pointer-events: auto;
-    padding: 10px 0;
-}
-
-.services {
-    margin-left: 100px;
-}
-.dropdown-trigger {
-    cursor: pointer;
-    padding: 10px;
-    margin-left: 8px;
-}
-
-.arrow-img {
-    position: absolute;
-    right: 10px; /* Position the arrow 10px from the right edge */
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.services-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: -20px;
-    width: 110%;
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 3rem;
+    }
 }

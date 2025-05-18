@@ -1,0 +1,298 @@
+/* Gallery Title */
+.gallery-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.3em;
+  color: #af9453;
+  font-size: 2.2rem;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Gallery Slider Layout */
+.gallery-slider {
+  position: relative;
+  /* max-width: 700px; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-images {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.5s;
+  z-index: 1;
+  transform: translateX(100%);
+}
+
+.gallery-img.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.gallery-img.slide-left {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(-100%);
+}
+
+.gallery-img.slide-right {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(100%);
+}
+
+/* Arrows */
+.gallery-arrow {
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 0 18px;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 12;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-arrow.left {
+  left: 0;
+}
+
+.gallery-arrow.right {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 1.3rem;
+    margin-top: 90px;
+    margin-bottom: 18px;
+  }
+  .gallery-slider {
+    max-width: 95vw;
+  }
+  .gallery-images {
+    height: 220px;
+  }
+  .gallery-img {
+    max-height: 220px;
+    border-radius: 8px;
+  }
+  .gallery-arrow {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+}
+
+/*  Mini Icons */
+
+.mini-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.icons {
+  font-size: 24px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .icon-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 24px;
+  position: relative;
+}
+
+.like-count {
+  font-size: 14px;
+  color: #333;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* .popup {
+  display: none;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  width: 300px;
+}
+
+.popup-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+} */
+
+/* .social-icon {
+  font-size: 24px;
+  width: 2px;
+  cursor: pointer;
+} */
+
+/* .popup input {
+  width: 80%;
+  padding: 5px;
+}
+
+.popup .copy-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+} */
+
+.like-btn {
+  font-size: 24px;
+  /* color: #333; */
+  cursor: pointer;
+  width: 24px;
+}
+
+.share-btn {
+  font-size: 24px;
+  /* color: #333; */
+  cursor: pointer;
+  width: 24px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 10px 10px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1;
+  background-color: #eee;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.hover-buttons {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-buttons {
+  opacity: 1;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .hover-buttons {
+    opacity: 1;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Twilight Events</title>
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic+Condensed+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic+Condensed+One&family=Wix+Madefor+Display:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <span class="logo-icon">
+            <img src="assets/icon.jpg" alt="Twilight Events Logo" />
+          </span>
+          <span class="logo-text">TWILIGHT EVENTS</span>
+        </a>
+        <!-- <a href="/login" class="login-btn">
+                <div class="user-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 19C20 16.7909 16.4183 15 12 15C7.58172 15 4 16.7909 4 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="login-text">Log In</span>
+            </a> -->
+      </div>
+
+      <div class="nav-container">
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a>
+          <div class="nav-item">
+            <a href="services.html">Services</a>
+            <div class="dropdown">
+              <a href="#wedding" class="dropdown-link">Wedding</a>
+              <a href="#private-parties" class="dropdown-link">Private</a>
+              <a href="#corporate" class="dropdown-link">Corporate</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+        </nav>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="mobile-menu">
+      <button class="close-menu-btn">×</button>
+      <div class="mobile-menu-content">
+        <nav>
+          <a href="index.html">Home</a>
+          <div class="mobile-nav-item">
+            <div class="services-toggle">
+              <a href="services.html">Services</a>
+              <span class="dropdown-trigger arrow"
+                ><img
+                  src="./assets/arrow-down.png"
+                  alt="drop down"
+                  class="arrow-img"
+              /></span>
+            </div>
+            <div class="mobile-dropdown">
+              <a href="services.html#wedding">Weddings</a>
+              <a href="services.html#private-parties">Private Parties</a>
+              <a href="services.html#corporate">Corporate Events</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="gallery-main">
+      <h1 class="gallery-title">GALLERY</h1>
+      <div class="gallery-slider">
+        <button class="gallery-arrow left" aria-label="Previous">
+          <img
+            src="assets/left-arrow.png"
+            alt="left arrow"
+            style="width: 20px"
+          />
+        </button>
+        <div class="gallery-images">
+          <img
+            src="https://static.wixstatic.com/media/84770f_ad4db7e7d7024dedbec4c2cc5e206464~mv2_d_2600_1734_s_2.jpg/v1/fill/w_1960,h_1650,q_90,enc_avif,quality_auto/84770f_ad4db7e7d7024dedbec4c2cc5e206464~mv2_d_2600_1734_s_2.jpg"
+            alt="Gallery Image 1"
+            class="gallery-img active"
+          />
+          <img
+            src="https://static.wixstatic.com/media/84770f_adb6bf225c324a6c8ea2926598114255~mv2_d_2600_1733_s_2.jpg/v1/fill/w_980,h_825,fp_0.49_0.46,q_90,enc_avif,quality_auto/84770f_adb6bf225c324a6c8ea2926598114255~mv2_d_2600_1733_s_2.jpg"
+            alt="Gallery Image 2"
+            class="gallery-img"
+          />
+          <img
+            src="https://static.wixstatic.com/media/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg"
+            alt="Gallery Image 3"
+            class="gallery-img"
+          />
+          <img
+            src="https://static.wixstatic.com/media/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg"
+            alt="Gallery Image 4"
+            class="gallery-img"
+          />
+          <img
+            src="https://static.wixstatic.com/media/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg"
+            alt="Gallery Image 5"
+            class="gallery-img"
+          />
+        </div>
+        <button class="gallery-arrow right" aria-label="Next">
+          <img
+            src="assets/right-arrow.png"
+            alt="right arrow"
+            style="width: 20px"
+          />
+        </button>
+      </div>
+    </main>
+
+    <div class="mini-icons">
+      <div class="icons">
+        <button class="icon-btn" id="likeBtn">
+          <img src="assets/heart.png" alt="like button" class="like-btn" />
+          <!-- <div class="like-count" id="likeCount">0</div> -->
+        </button>
+
+        <button class="icon-btn" id="shareBtn">
+          <img src="assets/share.png" alt="share button" class="share-btn" />
+        </button>
+      </div>
+
+      <!-- <div class="popup" id="sharePopup">
+        <div class="close-btn" id="closePopup">&times;</div>
+        <div class="popup-icons">
+          <a href="#" class="social-icon"
+            ><img
+              src="https://static.wixstatic.com/media/01ab6619093f45388d66736ec22e5885.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01ab6619093f45388d66736ec22e5885.png"
+              alt="twitter icon"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img
+              src="assets/facebook.png"
+              alt="facebook icon"
+              style="width: 10px;"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img
+              src="assets/social.png"
+              alt="pintrest icon"
+              style="width: 10px;"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img
+              src="assets/twitter (1).png"
+              alt="twitter icon"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img
+              src="assets/tumblr.png"
+              alt="tumlr icon"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img
+              src="assets/whatsapp.png"
+              alt="whatsapp icon"
+          /></a>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="shareLink"
+            value="https://www.wix.com/demone2/event-p"
+            readonly
+          />
+          <button class="copy-btn" onclick="copyLink()">📋</button>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="image-grid">
+        <!-- Image 1 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg" alt="Outdoor dining area with string lights on a tree">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg" alt="Cocktail with garnish">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg" alt="Flower bouquet">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_6a1a99f184e34ef08d37665ee9397270~mv2_d_6966_4649_s_4_2.jpg" alt="Table setting with herbs">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_70e3abcb0d364ed79b18c19ed9985a4e~mv2_d_3999_2662_s_4_2.jpg" alt="People at a night event with lights">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="image-container">
+            <img src="https://static.wixstatic.com/media/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg/v1/fill/w_980,h_825,q_90,enc_avif,quality_auto/84770f_cdcc22e9ccbb47eb96a6fe8ca47d1456~mv2_d_5760_3840_s_4_2.jpg" alt="Table setting with flowers">
+            <div class="hover-buttons">
+                <button class="btn like-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                </button>
+                <button class="btn share-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+    <script src="footer-loader.js"></script>
+    <link rel="stylesheet" href="whatsapp-float.css" />
+    <div id="whatsapp-float-container"></div>
+    <script>
+      fetch("whatsapp-float.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("whatsapp-float-container").innerHTML = html;
+        });
+    </script>
+    <script>
+      const images = document.querySelectorAll(".gallery-img");
+      const leftBtn = document.querySelector(".gallery-arrow.left");
+      const rightBtn = document.querySelector(".gallery-arrow.right");
+      let current = 0;
+      let isSliding = false;
+
+      function showImage(next, direction) {
+        if (isSliding || next === current) return;
+        isSliding = true;
+
+        const currentImg = images[current];
+        const nextImg = images[next];
+
+        // Set up sliding direction
+        nextImg.classList.remove("slide-left", "slide-right", "active");
+        nextImg.style.transition = "none";
+        nextImg.style.opacity = "1";
+        nextImg.style.transform =
+          direction === "left" ? "translateX(-100%)" : "translateX(100%)";
+
+        // Force reflow for transition
+        void nextImg.offsetWidth;
+
+        // Animate out current image
+        currentImg.classList.remove("active");
+        currentImg.classList.add(
+          direction === "left" ? "slide-right" : "slide-left"
+        );
+
+        // Animate in next image
+        nextImg.style.transition = "";
+        nextImg.classList.add("active");
+        nextImg.classList.remove(
+          direction === "left" ? "slide-right" : "slide-left"
+        );
+        nextImg.classList.remove(
+          direction === "left" ? "slide-left" : "slide-right"
+        );
+
+        setTimeout(() => {
+          currentImg.classList.remove("slide-left", "slide-right");
+          nextImg.style.transform = "";
+          isSliding = false;
+        }, 500);
+
+        current = next;
+      }
+
+      leftBtn.addEventListener("click", () => {
+        const next = (current - 1 + images.length) % images.length;
+        showImage(next, "left");
+      });
+
+      rightBtn.addEventListener("click", () => {
+        const next = (current + 1) % images.length;
+        showImage(next, "right");
+      });
+
+      // Swipe support for mobile
+      let startX = 0;
+      document
+        .querySelector(".gallery-images")
+        .addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+        });
+      document
+        .querySelector(".gallery-images")
+        .addEventListener("touchend", (e) => {
+          let endX = e.changedTouches[0].clientX;
+          if (endX - startX > 50) leftBtn.click();
+          if (startX - endX > 50) rightBtn.click();
+        });
+    </script>
+  </body>
+</html>
