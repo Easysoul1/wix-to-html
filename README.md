@@ -1,10 +1,10 @@
-# Twilight Events Website
+# Aryluxe Website
 
 A responsive website for an event planning company, featuring multiple pages with modern design and functionality.
 
 ## Overview
 
-Twilight Events is a website designed to showcase event planning services, provide contact information, and enable potential clients to learn more about the company's offerings.
+Aryluxe is a website designed to showcase event planning services, provide contact information, and enable potential clients to learn more about the company's offerings.
 
 ## Features
 

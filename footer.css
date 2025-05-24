@@ -1,6 +1,6 @@
 /* Footer styles */
 .footer {
-    background-color: #AF9453;
+    background-color: #8FAC8B;
     color: #fff;
     padding: 30px 20px;
     margin: 50px;
@@ -114,14 +114,14 @@
     margin-right: 53px;
     margin-top: 2rem;
     border-radius: 50%;
-    border: 1px solid #AF9453; 
-    color: #AF9453; 
+    border: 1px solid #8FAC8B; 
+    color: #8FAC8B; 
     font-size: 0.875rem;
     transition: all 0.3s ease;
 }
 
 .book-now-btn:hover {
-    background-color: #b08d57; 
+    background-color: #8FAC8B; 
     color: #fff;
     border: 1px solid #fff;
 }
@@ -133,7 +133,7 @@
     height: 50px;
     width: 200px;
     border-radius: 5px;
-    background-color: #AF9453;
+    background-color: #8FAC8B;
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
@@ -160,15 +160,15 @@
 
 .book-now-button:hover {
     background-color: #fff; /* White background on hover */
-    color: #AF9453; /* Gold-like text color on hover */
-    border: 1px solid #AF9453; /* Gold-like border on hover */
+    color: #8FAC8B; /* Gold-like text color on hover */
+    border: 1px solid #8FAC8B; /* Gold-like border on hover */
 }
 
 
 
 @media (max-width: 768px) {
     .footer {
-        background-color: #AF9453;
+        background-color: #8FAC8B;
         width: 100%;
         margin: 0;
         padding: 2rem;

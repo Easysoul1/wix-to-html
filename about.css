@@ -65,7 +65,7 @@ header {
 }
 
 .logo-text {
-    color: #AF9453;
+    color: #8FAC8B;
     font-size: 16px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
@@ -94,7 +94,7 @@ header {
 }
 
 .desktop-nav a:hover {
-    color: #b45309;
+    color: #8FAC8B;
 }
 
 .nav-item {
@@ -109,7 +109,7 @@ header {
 }
 
 .nav-item:hover > a {
-    color: #b45309;
+    color: #8FAC8B;
 }
 
 .dropdown {
@@ -143,7 +143,7 @@ header {
 
 .dropdown-link:hover {
     background-color: #f0f0f0;
-    color: #b45309;
+    color: #8FAC8B;
 }
 
 /* Adjust mobile styles */
@@ -177,7 +177,7 @@ header {
 }
 
 .login-btn:hover {
-    color: #b08d57;
+    color: #8FAC8B;
 }
 
 .login-btn span {
@@ -189,7 +189,7 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: #AF9453;
+    background-color: #8FAC8B;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,7 +253,7 @@ header {
 }
 
 .mobile-menu-content a:hover {
-    color: #b08d57;
+    color: #8FAC8B;
 }
 
 .mobile-menu-content .login-btn {
@@ -265,7 +265,7 @@ header {
 }
 
 .mobile-menu-content .login-btn:hover {
-    color: #b08d57;
+    color: #8FAC8B;
 }
 
 /* About Section */
@@ -317,7 +317,7 @@ header {
     margin-top: -170px;
     position: relative;
     right: 120px; /* Shifted the "ABOUT US" text slightly to the left */
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     margin-bottom: 70px;
     text-transform: uppercase;
 }
@@ -346,13 +346,13 @@ header {
 .about-author {
     font-size: 18px;
     font-weight: bold;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     margin-bottom: 5px;
 }
 
 .about-role {
     font-size: 16px;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     font-style: italic;
 }
 
@@ -426,13 +426,13 @@ header {
 .about-author-alt {
     font-size: 18px;
     font-weight: bold;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     margin-bottom: 5px;
 }
 
 .about-role-alt {
     font-size: 16px;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     font-style: italic;
 }
 
@@ -522,13 +522,13 @@ header {
 .about-author-third {
     font-size: 18px;
     font-weight: bold;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     margin-bottom: 5px;
 }
 
 .about-role-third {
     font-size: 16px;
-    color: #b08d57; /* Gold-like color */
+    color: #8FAC8B; /* Gold-like color */
     font-style: italic;
 }
 
@@ -822,7 +822,7 @@ header {
 }
 
 .mobile-dropdown-link:hover {
-    color: #AF9453;
+    color: #8FAC8B;
 }
 
 .mobile-nav-item {
@@ -867,7 +867,7 @@ header {
 }
 
 .mobile-dropdown a:hover {
-    color: #AF9453;
+    color: #8FAC8B;
 }
 
 /* Close button styles */
@@ -891,7 +891,7 @@ header {
 }
 
 .close-menu-btn:hover {
-    color: #AF9453;
+    color: #8FAC8B;
 }
 
 /* Mobile menu arrow styles */
